@@ -1,7 +1,9 @@
 pipeline{
    agent any
-   tools{ maven 'my_maven' }
    stages{
+      stage("test"){
+        steps{ sh "echo hello" }
+      }
       stage("compile"){
         steps{ 
           sh "mvn compile"
