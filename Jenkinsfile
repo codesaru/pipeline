@@ -1,6 +1,9 @@
 pipeline{
 	agent any
-   
+ 	tools{
+		maven 'my_maven'
+		jdk 'java8'
+	}  
 	stages{
 		stage("test"){
 			steps{ sh "echo hello" }
